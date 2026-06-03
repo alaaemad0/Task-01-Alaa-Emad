@@ -1,0 +1,61 @@
+# Rule-Based AI Chatbot
+# DecodeLabs - Project 1
+
+print("=" * 50)
+print("🤖 Welcome to the Rule-Based AI Chatbot!")
+print("Type 'exit' to end the conversation.")
+print("=" * 50)
+
+while True:
+
+    # User Input
+    user_input = input("\nYou: ")
+
+    # Sanitization
+    user_input = user_input.strip().lower()
+
+    # Exit Strategy
+    if user_input in ["exit", "quit", "bye"]:
+        print("Bot: Goodbye! Have a great day. 👋")
+        break
+
+    # Greeting Intent
+    elif user_input in ["hi", "hello", "hey"]:
+        print("Bot: Hello! How can I help you today?")
+
+    # Name Intent
+    elif user_input in ["what is your name", "who are you"]:
+        print("Bot: I am a Rule-Based AI Chatbot.")
+
+    # Help Intent
+    elif user_input == "help":
+        print("Bot: You can ask me about:")
+        print("- My name")
+        print("- Time")
+        print("- Weather")
+        print("- AI")
+        print("- How are you")
+
+    # How Are You Intent
+    elif user_input == "how are you":
+        print("Bot: I'm doing great! Thanks for asking.")
+
+    # Weather Intent
+    elif user_input == "weather":
+        print("Bot: I cannot check live weather yet, but it's always sunny in my code!")
+
+    # Time Intent
+    elif user_input == "time":
+        print("Bot: I don't have real-time access, but Python can provide the current time.")
+
+    # AI Intent
+    elif user_input == "what is ai":
+        print("Bot: AI stands for Artificial Intelligence, which enables machines to mimic human intelligence.")
+
+    # Creator Intent
+    elif user_input == "who created you":
+        print("Bot: I was created by an AI Engineering student.")
+
+    # Fallback Response
+    else:
+        print("Bot: Sorry, I don't understand that. Type 'help' to see what I can do.")
